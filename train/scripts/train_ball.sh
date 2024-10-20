@@ -1,0 +1,2 @@
+#!/bin/sh
+python train.py --print-freq 100 --deterministic --epochs 400 --optimizer Adam --lr 0.001 --wd 0 --model ai85tinierssd --use-bias --momentum 0.9 --weight-decay 5e-4 --dataset BALL_74_74 --device MAX78000 --obj-detection --obj-detection-params parameters/obj_detection_params_svhn.yaml --batch-size 32 --qat-policy policies/qat_policy_colorball.yaml --compress policies/schedule-colorball.yaml --validation-split 0 "$@"
